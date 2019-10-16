@@ -21,3 +21,13 @@ services:
     ports:
       - 1025:1025
       - 8025:8025
+
+  web:
+    image: webbuild
+    ports: 
+      - 8081:80
+    volumes:
+      - "/c/Users/lebon/Documents/ProjetDocker"
+    depends_on:
+      - mariadb
+      - mailhog
